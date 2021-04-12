@@ -5,7 +5,6 @@ import BlogsContainer from "./Containers/BlogsContainer";
 import Navbar from "./Components/Navbar";
 import SearchBar from "./Components/SearchBar";
 
-
 class App extends React.Component {
   state = { allBlogs: [], blogs: [] };
 
@@ -16,7 +15,9 @@ class App extends React.Component {
   }
 
   searchFilter = (e) => {
-    const filteredBlogs = this.state.allBlogs.filter((blog) => blog.title.toLowerCase().includes(e.target.value.toLowerCase()));
+    const filteredBlogs = this.state.allBlogs.filter((blog) =>
+      blog.title.toLowerCase().includes(e.target.value.toLowerCase())
+    );
     this.setState({ blogs: filteredBlogs });
   };
 
@@ -28,10 +29,8 @@ class App extends React.Component {
           path="/"
           render={() => (
             <>
-            <SearchBar searchFilter={this.searchFilter}/>
-            <BlogsContainer
-              blogs={this.state.blogs}
-            />
+              <SearchBar searchFilter={this.searchFilter} />
+              <BlogsContainer blogs={this.state.blogs} />
             </>
           )}
         />

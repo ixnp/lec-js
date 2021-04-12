@@ -2,7 +2,6 @@ import React from 'react'
 import { Route, Switch } from 'react-router-dom'
 import BlogsList from '../Components/BlogsList'
 import SavedBlogsList from '../Components/SavedBlogsList'
-import SearchBar from '../Components/SearchBar'
 
 
 class BlogsContainer extends React.Component{

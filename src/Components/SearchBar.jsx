@@ -2,7 +2,6 @@ import SearchIcon from "@material-ui/icons/Search";
 import { fade, makeStyles } from "@material-ui/core/styles";
 import InputBase from "@material-ui/core/InputBase";
 
-
 const useStyles = makeStyles((theme) => ({
   search: {
     display: "flex",
@@ -29,17 +28,17 @@ function SearchBar(props) {
   return (
     <div className={classes.search}>
       <div>
-        <SearchIcon color="action"/>
+        <SearchIcon color="action" />
       </div>
-        <InputBase
-            placeholder="Search…"
-            classes={{
-            root: classes.inputRoot,
-            input: classes.inputInput,
-            }}
-            inputProps={{ "aria-label": "search" }}
-            onChange={props.searchFilter}
-        />
+      <InputBase
+        placeholder="Search…"
+        classes={{
+          root: classes.inputRoot,
+          input: classes.inputInput,
+        }}
+        inputProps={{ "aria-label": "search" }}
+        onChange={props.searchFilter}
+      />
     </div>
   );
 }
