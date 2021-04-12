@@ -1,28 +1,33 @@
-import { makeStyles } from '@material-ui/core'
-import Grid from '@material-ui/core/Grid';
-import BlogCard from '../Components/BlogCard'
+import { makeStyles } from "@material-ui/core";
+import Grid from "@material-ui/core/Grid";
+import BlogCard from "../Components/BlogCard";
 
 const useStyles = makeStyles(() => ({
   root: {
     marginTop: "3%",
-    padding: "2%"
-  }
-}))
+    padding: "2%",
+  },
+}));
 
-function BlogsList({ blogs, blogCardClickHandler }) {
-  const classes = useStyles()
+function BlogsList({ blogs, blogCardClickHandler, searchFilter }) {
+  const classes = useStyles();
 
   function createBlogCards() {
-    return blogs.map(blogObject => (
-      <BlogCard key={blogObject.id} blogObject={blogObject} clickHandler={blogCardClickHandler} />
-    ))
+    return blogs.map((blogObject) => (
+      <BlogCard
+        key={blogObject.id}
+        blogObject={blogObject}
+        clickHandler={blogCardClickHandler}
+      />
+    ));
   }
-  console.log(blogs)
   return (
-    <Grid className={classes.root} container spacing={3} >
-      {createBlogCards()}
-    </Grid >
-  )
+    <>
+      <Grid className={classes.root} container spacing={3}>
+        {createBlogCards()}
+      </Grid>
+    </>
+  );
 }
 
-export default BlogsList
+export default BlogsList;
