@@ -9,7 +9,7 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
-function BlogsList({ blogs, blogCardClickHandler, searchFilter }) {
+function BlogsList({ blogs, blogCardClickHandler}) {
   const classes = useStyles();
 
   function createBlogCards() {
