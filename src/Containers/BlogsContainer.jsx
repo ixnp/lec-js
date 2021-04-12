@@ -13,7 +13,6 @@ class BlogsContainer extends React.Component {
           render={() => (
             <BlogsList
               blogs={this.props.blogs}
-              searchFilter={this.props.searchFilter}
             />
           )}
         />
