@@ -2,6 +2,8 @@ import React from 'react'
 import { Route, Switch } from 'react-router-dom'
 import BlogsList from '../Components/BlogsList'
 import SavedBlogsList from '../Components/SavedBlogsList'
+import SearchBar from '../Components/SearchBar'
+
 
 class BlogsContainer extends React.Component{
 
@@ -9,7 +11,7 @@ class BlogsContainer extends React.Component{
         return (
                 <Switch>
                     <Route path="/blogs/saved" component={SavedBlogsList} />
-                    <Route path="/" render={()=> <BlogsList blogs={this.props.blogs}/>} />
+                    <Route path="/" render={()=> <BlogsList blogs={this.props.blogs} searchFilter={this.props.searchFilter}/>} />
                 </Switch>
 
             )
