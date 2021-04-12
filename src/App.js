@@ -16,10 +16,7 @@ class App extends React.Component {
   }
 
   searchFilter = (e) => {
-    const filteredBlogs = this.state.allBlogs.filter((blog) => {
-      let title = blog.title.toLowerCase();
-      return title.includes(e.target.value);
-    });
+    const filteredBlogs = this.state.allBlogs.filter((blog) => blog.title.toLowerCase().includes(e.target.value.toLowerCase()));
     this.setState({ blogs: filteredBlogs });
   };
 
