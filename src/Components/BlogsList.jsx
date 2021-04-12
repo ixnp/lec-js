@@ -22,11 +22,9 @@ function BlogsList({ blogs, blogCardClickHandler, searchFilter }) {
     ));
   }
   return (
-    <>
       <Grid className={classes.root} container spacing={3}>
         {createBlogCards()}
       </Grid>
-    </>
   );
 }
 
